@@ -2,19 +2,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // создаем документ
+        // Г±Г®Г§Г¤Г ГҐГ¬ Г¤Г®ГЄГіГ¬ГҐГ­ГІ
         Document document = new Document();
 
         // ...
 
-        // создаем точку входа для генерации отчетов
+        // Г±Г®Г§Г¤Г ГҐГ¬ ГІГ®Г·ГЄГі ГўГµГ®Г¤Г  Г¤Г«Гї ГЈГҐГ­ГҐГ°Г Г¶ГЁГЁ Г®ГІГ·ГҐГІГ®Гў
         ReportEntrypoint reportEntrypoint = new ReportEntrypoint();
 
-        // генерируем XML отчет
+        // ГЈГҐГ­ГҐГ°ГЁГ°ГіГҐГ¬ XML Г®ГІГ·ГҐГІ
         Report xmlReport = reportEntrypoint.create(document, "xml");
 
-        // выводим результат
+        // ГўГ»ГўГ®Г¤ГЁГ¬ Г°ГҐГ§ГіГ«ГјГІГ ГІ
         System.out.println(new String(xmlReport.getData()));
     }
-
+   
 }
