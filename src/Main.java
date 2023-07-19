@@ -1,21 +1,20 @@
 public class Main {
-    public class ReportEntrypoint {
 
-        public Report create(Document document, String reportType) {
-            throw new UnsupportedOperationException();
-        }
-
-    }
-    /**
-     *  1. Создаётся документ
-     *  2. Пользователь принимает решение о выборе расширения
-     *  3. Файл конвертируется в нужное расширение
-     *  3.1. Выбранное расширение подставляется в конвертер
-     *  4. Файл передаётся в отчёт
-     */
     public static void main(String[] args) {
-        Document document = new Document("123");
+
+        // создаем документ
+        Document document = new Document();
+
+        // ...
+
+        // создаем точку входа для генерации отчетов
         ReportEntrypoint reportEntrypoint = new ReportEntrypoint();
 
+        // генерируем XML отчет
+        Report xmlReport = reportEntrypoint.create(document, "xml");
+
+        // выводим результат
+        System.out.println(new String(xmlReport.getData()));
     }
+
 }
